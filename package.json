@@ -1,0 +1,20 @@
+{
+  "name": "bodjo-minesweeper",
+  "version": "1.0.0",
+  "description": "minesweeper game for bodjo.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bodjo",
+    "game",
+    "minesweeper",
+    "nodejs"
+  ],
+  "author": "dkaraush@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@dkaraush/bodjo-game": "^0.9.4"
+  }
+}
