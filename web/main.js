@@ -128,18 +128,18 @@ bodjo.on('connect', function (socket) {
 		})
 	];
 
-	socket.on('scoreboard', function (data) {
-		bodjo.renderScoreboard(['Place', 'Player', 'Level'], data.map(playerdata => {
-			return [
-				playerdata.place + '.', 
-				Player(playerdata.username), 
-				(['—', 'Beginner', 'Intermediate', 'Expert', 'Expert+'])[playerdata.value+1]
-			];
-		}));
-	})
-
 	bodjo.getControl('timeout').set(timeout);
 });
+
+bodjo.on('scoreboard', function (data) {
+	bodjo.renderScoreboard(['Place', 'Player', 'Level completed'], data.map(playerdata => {
+		return [
+			playerdata.place + '.', 
+			Player(playerdata.username), 
+			(['—', 'Beginner', 'Intermediate', 'Expert', 'Expert+'])[playerdata.value+1]
+		];
+	}));
+})
 
 function decodeField(buffer) {
 	let array = new Uint8Array(buffer);
