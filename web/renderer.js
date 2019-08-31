@@ -1,6 +1,6 @@
-let lastField = null;
-bodjo.on('render', function (field, turn) {
-	lastField = field;
+bodjo.contextName = '2d';
+bodjo.render = function (canvas, ctx, resizeCanvas, field, turn) {
+	console.log(arguments)
 	let height = field.length;
 	let width = field[0].length;
 
@@ -24,7 +24,7 @@ bodjo.on('render', function (field, turn) {
 					   canvas.width / width,
 					   canvas.height / height);
 	}
-});
+};
 
 var tiles = new Image();
 tiles.src = '/tiles.png';

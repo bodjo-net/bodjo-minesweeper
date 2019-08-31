@@ -17,7 +17,7 @@ bodjo.on('connect', function (socket) {
 			bodjo.getControl('difficulty').set(level);
 			
 			lastField = decodeField(field);
-			bodjo.render(lastField, lastTurn);
+			bodjo.callRender(lastField, lastTurn);
 
 			if (lastStatus != 'playing')
 				stop();
