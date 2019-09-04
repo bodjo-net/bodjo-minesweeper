@@ -1,4 +1,4 @@
-const BodjoGame = require('../bodjo-game/index.js');//require('@dkaraush/bodjo-game');
+const BodjoGame = require('@dkaraush/bodjo-game');
 let bodjo = new BodjoGame(promptConfig('config.json'));
 bodjo.initClient('./web/');
 
