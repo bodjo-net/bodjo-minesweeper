@@ -1,5 +1,5 @@
 bodjo.contextName = '2d';
-bodjo.render = function (canvas, ctx, resizeCanvas, field, turn) {
+bodjo.render = function (canvas, ctx, resizeCanvas, dataPushed, field, turn) {
 	let height = field.length;
 	let width = field[0].length;
 

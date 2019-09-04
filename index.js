@@ -1,4 +1,4 @@
-const BodjoGame = require('@dkaraush/bodjo-game');
+const BodjoGame = require('../bodjo-game/index.js');//require('@dkaraush/bodjo-game');
 let bodjo = new BodjoGame(promptConfig('config.json'));
 bodjo.initClient('./web/');
 
@@ -16,6 +16,7 @@ bodjo.on('player-connect', (player) => {
 	player.emit('field', encodeField(data.open), {
 		status: data.status, 
 		level: data.level
+
 	});
 
 	player.on('new', (level, messageid) => {
